@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-    <App />
     <GlobalStyles />
+    <App />
   </React.StrictMode>,
 );
