@@ -1,0 +1,77 @@
+{
+  "footer": {
+    "institutional": {
+      "product": {
+        "title": "Product",
+        "links": [
+          {
+            "title": "Download",
+            "url": "#"
+          },
+          {
+            "title": "Pricing",
+            "url": "#"
+          },
+          {
+            "title": "Locations",
+            "url": "#"
+          },
+          {
+            "title": "Server",
+            "url": "#"
+          },
+          {
+            "title": "Countries",
+            "url": "#"
+          },
+          {
+            "title": "Blog",
+            "url": "#"
+          }
+        ]
+      },
+      "engage": {
+        "title": "Engage",
+        "links": [
+          {
+            "title": "LaslesVPN ?",
+            "url": "#"
+          },
+          {
+            "title": "FAQ",
+            "url": "#"
+          },
+          {
+            "title": "Tutorials",
+            "url": "#"
+          },
+          {
+            "title": "About Us",
+            "url": "#"
+          },
+          {
+            "title": "Privacy Policy",
+            "url": "#"
+          },
+          {
+            "title": "Terms of Service",
+            "url": "#"
+          }
+        ]
+      },
+      "earn_money": {
+        "title": "Earn Money",
+        "links": [
+          {
+            "title": "Affiliate",
+            "url": "#"
+          },
+          {
+            "title": "Become Partner",
+            "url": "#"
+          }
+        ]
+      }
+    }
+  }
+}
