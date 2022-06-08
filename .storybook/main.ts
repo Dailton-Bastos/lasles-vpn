@@ -1,6 +1,8 @@
-import type { StorybookConfig } from '@storybook/core-common';
+import type { StorybookViteConfig } from '@storybook/builder-vite';
+import viteSvgr from 'vite-plugin-svgr';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
-const config: StorybookConfig = {
+const config: StorybookViteConfig = {
   stories: ['../src/components/**/*.stories.tsx'],
   addons: [
     '@storybook/addon-links',
@@ -24,6 +26,11 @@ const config: StorybookConfig = {
   features: {
     storyStoreV7: true,
   },
+
+  viteFinal: async (config) => {
+    config.plugins = [...config.plugins, viteSvgr(), tsconfigPaths()];
+    return config;
+  },
 };
 
-module.exports = config;
+export default config;
