@@ -3,14 +3,18 @@ import { Logo } from '~/components/Logo';
 import { footer } from '~/mock-components.json';
 
 import { Institutional } from './Institutional';
+import { Newsletter } from './Newsletter';
 import { SocialIcons } from './Social';
 import * as Styled from './styles';
 
 export const Footer = () => {
   const { institutional } = footer;
+
   return (
     <Styled.Wrapper>
       <Container>
+        <Newsletter />
+
         <Styled.Content>
           <Styled.Social>
             <Logo />
