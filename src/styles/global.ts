@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --white: #fff;
     --gray-50: #F8F8F8;
+    --gray-100: #F6F6F6;
     --gray-400: #AFB5C0;
     --gray-600: #4F5665;
     --gray-900: #0B132A;
@@ -26,6 +27,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background: var(--gray-100);
     -webkit-font-smoothing: antialiased;
   }
 
