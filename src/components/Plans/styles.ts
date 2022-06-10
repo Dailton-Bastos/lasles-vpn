@@ -7,6 +7,7 @@ export const Content = styled.div`
   margin: 0 auto;
   max-width: 1140px;
   justify-content: center;
+  padding-bottom: 150px;
   width: 100%;
 
   h2 {
