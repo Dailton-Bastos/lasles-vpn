@@ -1,4 +1,45 @@
 {
+  "plans": [
+    {
+      "id": 1,
+      "title": "Free Plan",
+      "benefits": [
+        "Unlimited Bandwitch",
+        "Encrypted Connection",
+        "No Traffic Logs",
+        "Works on All Devices"
+      ],
+      "value": 0,
+      "recommended": false
+    },
+    {
+      "id": 2,
+      "title": "Standard Plan",
+      "benefits": [
+        "Unlimited Bandwitch",
+        "Encrypted Connection",
+        "Yes Traffic Logs",
+        "Works on All Devices",
+        "Connect Anyware"
+      ],
+      "value": 9,
+      "recommended": true
+    },
+    {
+      "id": 3,
+      "title": "Premium Plan",
+      "benefits": [
+        "Unlimited Bandwitch",
+        "Encrypted Connection",
+        "Yes Traffic Logs",
+        "Works on All Devices",
+        "Connect Anyware",
+        "Get New Features"
+      ],
+      "value": 12,
+      "recommended": false
+    }
+  ],
   "footer": {
     "newsletter": {
       "title": "Subscribe Now for Get Special Features!",
