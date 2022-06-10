@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { Plans } from '.';
 
-describe('Footer component', () => {
+describe('Plans component', () => {
   it('renders correctly', () => {
     render(<Plans />);
 
