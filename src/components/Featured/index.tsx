@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { Companies } from '~/components/Companies';
 import { Container } from '~/components/Container';
 import { Map } from '~/components/Map';
 import { Plans } from '~/components/Plans';
@@ -12,6 +11,7 @@ export const Featured = () => {
       <Container>
         <Plans />
         <Map />
+        <Companies />
       </Container>
     </Styled.Wrapper>
   );
