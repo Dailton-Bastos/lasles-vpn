@@ -1,0 +1,81 @@
+.swiper {
+  padding: 20px 0 120px;
+}
+
+.swipper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-pagination {
+  text-align: left;
+  bottom: 25px !important;
+}
+
+.swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #F53838;
+  border-radius: 15px;
+  height: 15px;
+  width: 45px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  align-items: center;
+  border-radius: 50%;
+  background: #F53838;
+  border: 2px solid #F53838;
+  display: flex;
+  justify-content: center;
+  top: 88%;
+  right: 15%;
+  height: 60px;
+  width: 60px;
+  z-index: 12;
+}
+
+.swiper-button-prev {
+  left: initial;
+  right: 22%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC0SURBVHgB7ZbtCcIwEIbfOIEbGDfQDRyhG9UN6ghu4CiO0G6gG8T3MKWhEGhLuPTHPXBcKSEP+boEMAxjRgjhxnhJhiZRKnwYHlpQ1oSJXlveJvI3NKGwS+QdNJHRJvI7tJD1jes80uTaukwHR6YLtnFiPOP3l3F1zg1LxT2TRxkGis/znwdUIjdij/+UbcFjwVQXZc3mKi1Oj1MLDSh6qBcQKRbqJbPaJVHzWqzzEDCM3fEDubXmz2aqabgAAAAASUVORK5CYII=');
+  display: block;
+  font-size: initial;
+  height: 30px;
+  width: 30px;
+}
+
+.swiper-button-prev::after {
+  transform: rotate(-180deg);
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-button-prev.swiper-button-disabled::after,
+.swiper-button-next.swiper-button-disabled::after {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFkSURBVHgB7ZTRTcMwFEWvU6BCFQg2KBvAV5I/ugGdADFJ0wkoEyAmSDeAv+SvMAEeAZVGoEqNeY+4qCpJsGLz1Rwpcuy89ubZNxdoadlp3oPgMvP9mEdYsmda+BEE/VypGEKceErx0hMs8EyKWJSkHlmU5yvPe4AlRsJKiJiE+3oaHSfJFJb8KbwIw4lS6pzvhRCTXpqO4QBR9zALgoiGUVEpnntJcgFHVHacheHVjyggl0oN4ZDSjrWDZ2sz0fne0CXRAPps5GGaypL132w6WL/dfe2Z1KBf+Gx73asodkbVf5V2vAQGBxtbvaKt3hfiFQ347HZfytYrd3BO5upwUhVFkq5B2Vk1pdLVHBL0MOJ7Do+cQgQOqQ0Q6nDMofE9oRBZ+P4tHGFkVvqmZ9DplQPjozSNYIlRVuvwkPoHo3kRLv8vfEqmYqdT12887+T5NSwxEl6Lk8GGJD6l8Q4tLS1bfAGxgHnPZ2Hd0AAAAABJRU5ErkJggg==');
+  display: block;
+  font-size: initial;
+  height: 30px;
+  width: 30px;
+}
+
+.swiper-button-next.swiper-button-disabled::after {
+  transform: rotate(-180deg);
+}
+
+.swiper-button-prev.swiper-button-disabled::after {
+  transform: none;
+}

@@ -1,37 +1,42 @@
-import { RiStarHalfFill } from 'react-icons/ri';
+import { RiStarHalfFill, RiStarSFill } from 'react-icons/ri';
+
+import { TestimonialProps } from '~/@types/testemonial';
 
 import * as Styled from './styles';
 
-export const Testimonial = () => {
+type Props = {
+  testimonial: TestimonialProps;
+  isActive?: boolean;
+};
+
+export const Testimonial = ({ testimonial, isActive = false }: Props) => {
   return (
-    <Styled.Testimonial>
+    <Styled.Testimonial className={isActive ? 'isActive' : ''}>
       <header>
         <Styled.Profile>
           <Styled.Avatar>
-            <img
-              src="https://testimonialapi.toolcarton.com/avatar/1.jpg"
-              alt="User"
-            />
+            <img src={testimonial.avatar} alt={testimonial.name} />
           </Styled.Avatar>
 
           <Styled.User>
-            <h4>Dailton Bastos</h4>
-            <span>London, UK</span>
+            <h4>{testimonial.name}</h4>
+            <span>{testimonial.location}</span>
           </Styled.User>
         </Styled.Profile>
 
         <Styled.Rating>
-          <span>4.5</span>
-          <RiStarHalfFill color="#FEA250" />
+          <span>{testimonial.rating}</span>
+
+          {testimonial.rating <= 3 ? (
+            <RiStarHalfFill color="#FEA250" />
+          ) : (
+            <RiStarSFill color="#FEA250" />
+          )}
         </Styled.Rating>
       </header>
 
       <blockquote>
-        <p>
-          &quot;We have been using product for last one year, and I have to say
-          that it has transformed the way we do business. Thank you for awesome
-          service.&quot;
-        </p>
+        <p>&quot;{testimonial.message}&quot;</p>
       </blockquote>
     </Styled.Testimonial>
   );

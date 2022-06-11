@@ -5,8 +5,8 @@ export const Testimonial = styled.article`
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 30px;
-  max-width: 400px;
-  min-height: 230px;
+  height: 230px;
+  overflow: hidden;
 
   header {
     align-items: center;
@@ -22,6 +22,11 @@ export const Testimonial = styled.article`
       line-height: 30px;
       text-align: left;
     }
+  }
+
+  &.isActive {
+    border: 3px solid var(--red-500);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.20);
   }
 `;
 
