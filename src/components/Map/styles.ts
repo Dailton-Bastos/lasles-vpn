@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Content = styled.div`
+import { ViewProps } from '~/@types/anime';
+import { fadeInLeft } from '~/styles/animation';
+
+export const Content = styled.div<ViewProps>`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -8,6 +11,8 @@ export const Content = styled.div`
   max-width: 1140px;
   justify-content: center;
   width: 100%;
+
+  ${({ inView }) => inView && css`animation: ${fadeInLeft} 1s;`}
 
   h2 {
     color: var(--gray-900);

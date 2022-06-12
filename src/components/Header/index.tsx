@@ -6,8 +6,24 @@ import { Logo } from '~/components/Logo';
 import * as Styled from './styles';
 
 export const Header = () => {
+  const refHeader = React.useRef<HTMLHeadingElement>(null);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 60) {
+        refHeader.current?.classList.add('sticky');
+      } else {
+        refHeader.current?.classList.remove('sticky');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper ref={refHeader}>
       <Container>
         <Styled.Content>
           <Logo />

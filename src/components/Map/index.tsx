@@ -1,10 +1,13 @@
 import mapImg from '~/assets/map.png';
+import { useObserver } from '~/hooks/useObserver';
 
 import * as Styled from './styles';
 
 export const Map = () => {
+  const { ref, inView } = useObserver();
+
   return (
-    <Styled.Content>
+    <Styled.Content ref={ref} inView={inView}>
       <h2>Huge Global Network of Fast VPN</h2>
 
       <p>

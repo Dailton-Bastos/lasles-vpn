@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Content = styled.div`
+import { ViewProps } from '~/@types/anime';
+import { fadein } from '~/styles/animation';
+
+export const Content = styled.div<ViewProps>`
   align-items: center;
   background-color: var(--white);
   border-radius: 10px;
@@ -15,6 +18,8 @@ export const Content = styled.div`
   max-width: 1140px;
   justify-content: space-between;
   width: 100%;
+
+  ${({ inView }) => inView && css`animation: ${fadein} 2s;`}
 `;
 
 export const Title = styled.div`

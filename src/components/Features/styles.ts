@@ -1,4 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { ViewProps } from '~/@types/anime';
+import { fadeInLeft, fadeInRight } from '~/styles/animation';
 
 export const Wrapper = styled.section`
   padding: 0 50px 131px;
@@ -16,7 +19,7 @@ export const Content = styled.div`
   width: 100%;
 `;
 
-export const About = styled.div`
+export const About = styled.div<ViewProps>`
   h2 {
     color: var(--gray-900);
     font-size: 3.5rem;
@@ -56,8 +59,10 @@ export const About = styled.div`
     }
   }
 
+  ${({ inView }) => inView && css`animation: ${fadeInRight} 1s;`}
 `;
 
-export const Hero = styled.div`
+export const Hero = styled.div<ViewProps>`
   flex-shrink: 0;
+  ${({ inView }) => inView && css`animation: ${fadeInLeft} 1s;`}
 `;

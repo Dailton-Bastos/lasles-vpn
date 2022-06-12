@@ -1,12 +1,14 @@
+import { useObserver } from '~/hooks/useObserver';
 import { footer } from '~/mock-components.json';
 
 import * as Styled from './styles';
 
 export const Newsletter = () => {
+  const { ref, inView } = useObserver();
   const { newsletter } = footer;
 
   return (
-    <Styled.Content>
+    <Styled.Content ref={ref} inView={inView}>
       <Styled.Title>
         <h2>{newsletter.title}</h2>
 

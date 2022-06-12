@@ -1,18 +1,21 @@
 import FeaturesImg from '~/assets/features.png';
 import { Container } from '~/components/Container';
+import { useObserver } from '~/hooks/useObserver';
 
 import * as Styled from './styles';
 
 export const Features = () => {
+  const { ref, inView } = useObserver();
+
   return (
     <Styled.Wrapper id="features">
       <Container>
-        <Styled.Content>
-          <Styled.Hero>
+        <Styled.Content ref={ref}>
+          <Styled.Hero inView={inView}>
             <img src={FeaturesImg} alt="User with a laptop" />
           </Styled.Hero>
 
-          <Styled.About>
+          <Styled.About inView={inView}>
             <h2>We Provide Many Features You Can Use</h2>
 
             <p>

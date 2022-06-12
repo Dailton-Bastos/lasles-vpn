@@ -1,8 +1,22 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  padding: 45px 50px;
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  position: fixed;
+  height: 90px;
+  padding: 0 50px;
+  left: 0;
+  top: 0;
   width: 100%;
+  z-index: 999;
+
+  &.sticky {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.3s;
+    height: 65px;
+  }
 `;
 
 export const Content = styled.div`

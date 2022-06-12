@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Content = styled.div`
+import { ViewProps } from '~/@types/anime';
+import { fadeInRight } from '~/styles/animation';
+
+export const Content = styled.div<ViewProps>`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -23,6 +26,8 @@ export const Content = styled.div`
     max-width: 555px;
     text-align: center;
   }
+
+  ${({ inView }) => inView && css`animation: ${fadeInRight} 1s;`}
 `;
 
 export const Testimonials = styled.div`

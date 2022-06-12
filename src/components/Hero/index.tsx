@@ -5,12 +5,15 @@ import * as Styled from './styles';
 
 export const Hero = () => {
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper id="about">
       <Container>
         <Styled.Content>
           <Styled.About>
             <h1>
-              Want anything to be easy with <strong>LaslesVPN.</strong>
+              <span>Want anything to be easy with</span>{' '}
+              <div>
+                <strong>LaslesVPN.</strong>
+              </div>
             </h1>
 
             <p>

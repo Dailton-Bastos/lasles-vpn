@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { showup, reveal, slidein, fadein } from '~/styles/animation';
+
 export const Wrapper = styled.section`
   padding: 0 50px;
   margin-top: 40px;
@@ -27,12 +29,23 @@ export const About = styled.div`
     line-height: 70px;
     margin-bottom: 20px;
 
-    strong {
-      font-weight: 700;
+    span {
+      animation: ${showup} 3s ease;
+    }
+
+    div {
+      display: inline;
+      animation: ${reveal} 3s ease;
+
+      strong {
+        position: relative;
+        animation: ${slidein} 5s ease-in-out;
+      }
     }
   }
 
   p {
+    animation: ${fadein} 2s;
     line-height: 30px;
     strong {
       font-weight: 500;
@@ -63,5 +76,6 @@ export const About = styled.div`
 `;
 
 export const Hero = styled.div`
+  animation: ${fadein} 3s;
   flex-shrink: 0;
 `;

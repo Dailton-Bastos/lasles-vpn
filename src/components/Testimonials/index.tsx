@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { TestimonialProps } from '~/@types/testemonial';
+import { useObserver } from '~/hooks/useObserver';
 
 import { SliderTestimonials } from './Slider';
 import * as Styled from './styles';
@@ -11,6 +12,7 @@ export const Testimonials = () => {
   );
 
   const [error, setError] = React.useState(false);
+  const { ref, inView } = useObserver();
 
   React.useEffect(() => {
     async function fetchTestimonial() {
@@ -37,7 +39,7 @@ export const Testimonials = () => {
   }, []);
 
   return (
-    <Styled.Content id="testimonials">
+    <Styled.Content id="testimonials" ref={ref} inView={inView}>
       <h2>Trusted by Thousands of Happy Customer</h2>
 
       <p>
