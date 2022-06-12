@@ -2,6 +2,7 @@ import { RiStarHalfFill, RiStarSFill } from 'react-icons/ri';
 
 import { TestimonialProps } from '~/@types/testemonial';
 
+import { Expand } from '../Expand';
 import * as Styled from './styles';
 
 type Props = {
@@ -35,9 +36,7 @@ export const Testimonial = ({ testimonial, isActive = false }: Props) => {
         </Styled.Rating>
       </header>
 
-      <blockquote>
-        <p>&quot;{testimonial.message}&quot;</p>
-      </blockquote>
+      <Expand>{testimonial.message}</Expand>
     </Styled.Testimonial>
   );
 };

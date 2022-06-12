@@ -18,7 +18,7 @@ export const Content = styled.div`
     max-width: 447px;
   }
 
-  p {
+  > p {
     line-height: 30px;
     max-width: 555px;
     text-align: center;

@@ -5,8 +5,8 @@ export const Testimonial = styled.article`
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 30px;
-  height: 230px;
-  overflow: hidden;
+  height: 260px;
+  overflow-y: auto;
 
   header {
     align-items: center;
@@ -14,19 +14,24 @@ export const Testimonial = styled.article`
     justify-content: space-between;
   }
 
-  blockquote {
-    margin-top: 20px;
-
-    p {
-      color: var(--gray-900);
-      line-height: 30px;
-      text-align: left;
-    }
-  }
-
   &.isActive {
     border: 3px solid var(--red-500);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.20);
+  }
+
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--gray-400);
+    border-radius: 10px;
+    border: 3px solid var(--gray-400);
   }
 `;
 

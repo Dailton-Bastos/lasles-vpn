@@ -17,6 +17,7 @@ export const SliderTestimonials = ({ testimonials = [] }: Props) => {
     slidesPerView: testimonials.length < 3 ? testimonials.length : 3,
     navigation: testimonials.length >= 3,
     draggable: testimonials.length >= 3,
+    allowTouchMove: false,
     pagination: {
       clickable: false,
     },
