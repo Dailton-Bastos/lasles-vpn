@@ -14,7 +14,7 @@ export const Content = styled.div`
   width: 100%;
 
   @media only screen and (max-width: 1125px) {
-    padding-bottom: 90px;
+    padding-bottom: 60px;
   }
 
   h2 {

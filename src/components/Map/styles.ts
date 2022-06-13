@@ -22,12 +22,21 @@ export const Content = styled.div<ViewProps>`
     text-align: center;
     margin-bottom: 20px;
     max-width: 383px;
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 3rem;
+      max-width: 100%;
+    }
   }
 
   p {
     line-height: 30px;
     max-width: 555px;
     text-align: center;
+
+    @media only screen and (max-width: 1125px) {
+      max-width: 100%;
+    }
 
     strong {
       font-weight: 500;
@@ -38,4 +47,13 @@ export const Content = styled.div<ViewProps>`
 export const Map = styled.div`
   margin: 155px auto 35px;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    margin: 35px auto;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
 `;
