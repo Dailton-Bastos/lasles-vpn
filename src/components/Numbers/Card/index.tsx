@@ -1,6 +1,8 @@
 import React from 'react';
 import AnimatedNumbers from 'react-animated-numbers';
 
+import { useMediaQuery } from '~/hooks/useMediaQuery';
+
 import * as Styled from './styles';
 
 type CardProps = {
@@ -10,6 +12,8 @@ type CardProps = {
 };
 
 export const Card = ({ total, title, icon: Icon }: CardProps) => {
+  const isMobile = useMediaQuery('(max-width: 1125px)');
+
   return (
     <Styled.Wrapper>
       <Icon />
@@ -20,7 +24,7 @@ export const Card = ({ total, title, icon: Icon }: CardProps) => {
             includeComma
             animateToNumber={total}
             fontStyle={{
-              fontSize: 25,
+              fontSize: isMobile ? 20 : 25,
               fontWeight: 700,
               fontFamily: 'Rubik',
               color: '#0B132A',
