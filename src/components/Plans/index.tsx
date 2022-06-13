@@ -26,7 +26,7 @@ export const Plans = () => {
               key={plan.id}
               plan={plan}
               onClick={() => setSelectedId(plan.id)}
-              selectedId={selectedId}
+              selected={selectedId === plan.id}
               recommended={plan.recommended}
             />
           ))}

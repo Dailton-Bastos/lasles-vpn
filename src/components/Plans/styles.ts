@@ -13,12 +13,21 @@ export const Content = styled.div`
   padding-bottom: 150px;
   width: 100%;
 
+  @media only screen and (max-width: 1125px) {
+    padding-bottom: 90px;
+  }
+
   h2 {
     color: var(--gray-900);
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 50px;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
   }
 
   p {
@@ -35,6 +44,12 @@ export const Plans = styled.div<ViewProps>`
   max-width: 1090px;
   margin-top: 60px;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    grid-template-columns: auto;
+    gap: 30px;
+    margin-top: 30px;
+  }
 
   ${({ inView }) =>
     inView &&

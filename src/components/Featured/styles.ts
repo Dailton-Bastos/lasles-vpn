@@ -5,4 +5,8 @@ export const Wrapper = styled.section`
   padding: 80px 50px 30px;
   overflow: hidden;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    padding: 30px 15px;
+  }
 `;

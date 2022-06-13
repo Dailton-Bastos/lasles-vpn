@@ -1,6 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div`
+type Props = {
+  selected: boolean;
+  recommended: boolean;
+};
+
+export const Wrapper = styled.div<Props>`
   align-items: center;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -10,21 +15,33 @@ export const Wrapper = styled.div`
   padding: 80px 60px 50px;
   position: relative;
 
-  &.recommended {
-    &::before {
-      content: 'Recommended';
-      background: var(--red-500);
-      border-radius: 5px;
-      color: var(--white);
-      display: block;
-      font-size: 1.4rem;
-      font-weight: 500;
-      padding: 5px 8px;
-      position: absolute;
-      left: 12px;
-      top: -15px;
-    }
+  @media only screen and (max-width: 1125px) {
+    padding: 40px 20px;
   }
+
+  ${({ selected }) =>
+    selected &&
+    css`
+    border: 2px solid var(--red-500);
+  `}
+
+  ${({ recommended }) =>
+    recommended &&
+    css`
+    &::before {
+        content: 'Recommended';
+        background: var(--red-500);
+        border-radius: 5px;
+        color: var(--white);
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 5px 8px;
+        position: absolute;
+        left: 12px;
+        top: -15px;
+      }
+  `}
 
   h3 {
     color: var(--gray-900);
@@ -32,11 +49,19 @@ export const Wrapper = styled.div`
     font-weight: 500;
     line-height: 30px;
     margin: 30px 0;
+
+    @media only screen and (max-width: 1125px) {
+      margin: 20px 0;
+    }
   }
 
   ul {
     list-style: none;
     margin-bottom: 50px;
+
+    @media only screen and (max-width: 1125px) {
+      margin-bottom: 20px;
+    }
 
     li {
       align-items: center;
@@ -44,6 +69,10 @@ export const Wrapper = styled.div`
       font-size: 1.4rem;
       gap: 20px;
       line-height: 30px;
+
+      @media only screen and (max-width: 1125px) {
+        font-size: 1.6rem;
+      }
 
       & + li {
         margin-top: 10px;
@@ -57,28 +86,26 @@ export const Wrapper = styled.div`
       }
     }
   }
-
-  &.selected {
-    border: 2px solid var(--red-500);
-
-    button {
-      background: var(--red-500);
-      box-shadow: 0 25px 50px -12px rgba(245, 56, 56, 0.35);
-      color: var(--white);
-    }
-  }
 `;
 
-export const Bottom = styled.div`
+export const Bottom = styled.div<Partial<Props>>`
   align-items: center;
   flex-direction: column;
   display: flex;
   justify-content: center;
   margin-top: auto;
 
+  @media only screen and (max-width: 1125px) {
+    width: 100%;
+  }
+
   p {
     font-size: 2.5rem;
     line-height: 30px;
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 2rem;
+    }
 
     strong {
       color: var(--gray-900);
@@ -100,9 +127,21 @@ export const Bottom = styled.div`
     transition: all 0.3s;
     width: 177px;
 
+    @media only screen and (max-width: 1125px) {
+      width: 100%;
+    }
+
     &:hover {
       background-color: var(--red-500);
       color: var(--white);
     }
+
+    ${({ selected }) =>
+      selected &&
+      css`
+        background: var(--red-500);
+        box-shadow: 0 25px 50px -12px rgba(245, 56, 56, 0.35);
+        color: var(--white);
+    `}
   }
 `;

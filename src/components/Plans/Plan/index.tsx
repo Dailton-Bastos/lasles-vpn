@@ -1,35 +1,16 @@
-import React from 'react';
-
+import { PlanProps } from '~/@types/plan';
 import { ReactComponent as FreeSVG } from '~/assets/plan.svg';
 
 import * as Styled from './styles';
 
-type Plan = {
-  id: number;
-  title: string;
-  value: number;
-  benefits: string[];
-};
-
-type PlanProps = {
-  selectedId?: number;
-  plan: Plan;
-  onClick: () => void;
-  recommended?: boolean;
-};
-
 export const Plan = ({
   plan,
-  selectedId,
+  selected,
   onClick,
   recommended = false,
 }: PlanProps) => {
   return (
-    <Styled.Wrapper
-      className={`${selectedId === plan.id ? 'selected' : ''} ${
-        recommended ? 'recommended' : ''
-      }`}
-    >
+    <Styled.Wrapper selected={selected} recommended={recommended}>
       <FreeSVG />
 
       <h3>{plan.title}</h3>
@@ -40,7 +21,7 @@ export const Plan = ({
         })}
       </ul>
 
-      <Styled.Bottom>
+      <Styled.Bottom selected={selected}>
         {plan.value >= 1 ? (
           <p>
             <strong>${plan.value}</strong> / mo
