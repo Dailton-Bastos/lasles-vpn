@@ -7,6 +7,10 @@ export const Wrapper = styled.section`
   padding: 0 50px 131px;
   margin-top: 95px;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    padding: 0 15px 50px;
+  }
 `;
 
 export const Content = styled.div`
@@ -17,6 +21,12 @@ export const Content = styled.div`
   max-width: 1140px;
   justify-content: space-between;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const About = styled.div<ViewProps>`
@@ -27,6 +37,11 @@ export const About = styled.div<ViewProps>`
     line-height: 50px;
     margin-bottom: 20px;
     max-width: 383px;
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 3rem;
+      max-width: 100%;
+    }
 
   }
 
@@ -65,4 +80,11 @@ export const About = styled.div<ViewProps>`
 export const Hero = styled.div<ViewProps>`
   flex-shrink: 0;
   ${({ inView }) => inView && css`animation: ${fadeInLeft} 1s;`}
+
+  @media only screen and (max-width: 1125px) {
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
 `;
