@@ -1,9 +1,13 @@
+import heroImg from '~/assets/hero.png';
 import { ReactComponent as HeroSVG } from '~/assets/hero.svg';
 import { Container } from '~/components/Container';
+import { useMediaQuery } from '~/hooks/useMediaQuery';
 
 import * as Styled from './styles';
 
 export const Hero = () => {
+  const isMobile = useMediaQuery('(max-width: 1125px)');
+
   return (
     <Styled.Wrapper id="about">
       <Container>
@@ -24,9 +28,13 @@ export const Hero = () => {
             <a href="#pricing">Get Started</a>
           </Styled.About>
 
-          <Styled.Hero>
-            <HeroSVG />
-          </Styled.Hero>
+          {isMobile && <img src={heroImg} alt="Hero" />}
+
+          {!isMobile && (
+            <Styled.Hero>
+              <HeroSVG />
+            </Styled.Hero>
+          )}
         </Styled.Content>
       </Container>
     </Styled.Wrapper>
