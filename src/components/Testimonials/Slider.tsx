@@ -9,17 +9,32 @@ type Props = {
 
 export const SliderTestimonials = ({ testimonials = [] }: Props) => {
   if (testimonials.length === 1) {
-    return <Testimonial testimonial={testimonials[0]} />;
+    return <Testimonial testimonial={testimonials[0]} one={true} />;
   }
 
   const settings: SliderProps = {
-    spaceBetween: 50,
-    slidesPerView: testimonials.length < 3 ? testimonials.length : 3,
-    navigation: testimonials.length >= 3,
+    spaceBetween: 10,
+    slidesPerView: 1.2,
+    navigation: true,
     draggable: testimonials.length >= 3,
-    allowTouchMove: false,
+    allowTouchMove: true,
     pagination: {
-      clickable: false,
+      clickable: true,
+    },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2.2,
+      },
+
+      1024: {
+        spaceBetween: 50,
+        slidesPerView: 3,
+        allowTouchMove: false,
+        pagination: {
+          clickable: false,
+        },
+      },
     },
   };
 

@@ -1,12 +1,23 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Testimonial = styled.article`
+type Props = {
+  isActive: boolean;
+  one: boolean;
+};
+
+export const Testimonial = styled.article<Props>`
   background: var(--white);
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 30px;
   height: 260px;
+  max-width: ${({ one }) => (one ? '400px' : '100%')};
   overflow-y: auto;
+
+  @media only screen and (max-width: 1125px) {
+    padding: 20px;
+    height: 240px;
+  }
 
   header {
     align-items: center;
@@ -14,10 +25,15 @@ export const Testimonial = styled.article`
     justify-content: space-between;
   }
 
-  &.isActive {
-    border: 3px solid var(--red-500);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.20);
-  }
+  ${({ isActive }) =>
+    isActive &&
+    css`
+    @media only screen and (min-width: 1126px) {
+      border: 3px solid var(--red-500);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.20);
+    }
+  `}
+
 
 
   &::-webkit-scrollbar {

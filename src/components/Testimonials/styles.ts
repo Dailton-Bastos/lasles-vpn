@@ -11,6 +11,10 @@ export const Content = styled.div<ViewProps>`
   justify-content: center;
   width: 100%;
 
+  @media only screen and (max-width: 1125px) {
+    margin: 30px 0;
+  }
+
   h2 {
     color: var(--gray-900);
     font-size: 3.5rem;
@@ -19,31 +23,32 @@ export const Content = styled.div<ViewProps>`
     text-align: center;
     margin-bottom: 20px;
     max-width: 447px;
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 3rem;
+      max-width: 100%;
+    }
   }
 
   > p {
     line-height: 30px;
     max-width: 555px;
     text-align: center;
+
+    @media only screen and (max-width: 1125px) {
+      max-width: 100%;
+    }
   }
 
   ${({ inView }) => inView && css`animation: ${fadeInRight} 1s;`}
 `;
 
 export const Testimonials = styled.div`
-  margin: 60px 0 0 auto;
+  margin: 60px auto 0;
   max-width: 1310px;
   position: relative;
 
-  &::after {
-    content: '';
-    background: linear-gradient(270deg, #fff 0%, rgba(255,255,255,0) 100%);
-    display: block;
-    height: 110%;
-    position: absolute;
-    right: 0;
-    top: -10px;
-    width: 8.5vw;
-    z-index: 1;
+  @media only screen and (max-width: 1125px) {
+    margin: 20px auto 0;
   }
 `;

@@ -8,11 +8,16 @@ import * as Styled from './styles';
 type Props = {
   testimonial: TestimonialProps;
   isActive?: boolean;
+  one?: boolean;
 };
 
-export const Testimonial = ({ testimonial, isActive = false }: Props) => {
+export const Testimonial = ({
+  testimonial,
+  isActive = false,
+  one = false,
+}: Props) => {
   return (
-    <Styled.Testimonial className={isActive ? 'isActive' : ''}>
+    <Styled.Testimonial isActive={isActive} one={one}>
       <header>
         <Styled.Profile>
           <Styled.Avatar>
