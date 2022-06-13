@@ -1,4 +1,26 @@
 {
+  "navbar": [
+    {
+      "title": "About",
+      "url": "#about"
+    },
+    {
+      "title": "Features",
+      "url": "#features"
+    },
+    {
+      "title": "Pricing",
+      "url": "#pricing"
+    },
+    {
+      "title": "Testimonials",
+      "url": "#testimonials"
+    },
+    {
+      "title": "Help",
+      "url": "#help"
+    }
+  ],
   "plans": [
     {
       "id": 1,

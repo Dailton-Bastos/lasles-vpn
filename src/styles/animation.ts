@@ -104,3 +104,14 @@ export const fadeInUp = keyframes`
     transform: none
   }
 `;
+
+export const navLinkFade = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;

@@ -2,15 +2,20 @@ import React from 'react';
 
 import { Container } from '~/components/Container';
 import { Logo } from '~/components/Logo';
+import { useMediaQuery } from '~/hooks/useMediaQuery';
 
+import { Auth } from './Auth';
+import { Navbar } from './Navbar';
 import * as Styled from './styles';
 
 export const Header = () => {
+  const isMobile = useMediaQuery('(max-width: 1125px)');
+
   const refHeader = React.useRef<HTMLHeadingElement>(null);
 
   React.useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 60) {
+      if (window.scrollY > 60 && !isMobile) {
         refHeader.current?.classList.add('sticky');
       } else {
         refHeader.current?.classList.remove('sticky');
@@ -20,38 +25,17 @@ export const Header = () => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   return (
     <Styled.Wrapper ref={refHeader}>
       <Container>
         <Styled.Content>
-          <Logo />
+          {!isMobile && <Logo />}
 
-          <Styled.Nav>
-            <ul>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#features">Features</a>
-              </li>
-              <li>
-                <a href="#pricing">Pricing</a>
-              </li>
-              <li>
-                <a href="#testimonials">Testimonials</a>
-              </li>
-              <li>
-                <a href="#help">Help</a>
-              </li>
-            </ul>
-          </Styled.Nav>
+          <Navbar />
 
-          <Styled.Buttons>
-            <a href="/login">Sign In</a>
-            <a href="/account">Sign Up</a>
-          </Styled.Buttons>
+          {!isMobile && <Auth />}
         </Styled.Content>
       </Container>
     </Styled.Wrapper>
