@@ -20,6 +20,17 @@ export const Content = styled.div`
   max-width: 1140px;
   justify-content: space-between;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export const Social = styled.div`
@@ -28,6 +39,12 @@ export const Social = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
+  @media only screen and (max-width: 1125px) {
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
   p {
     line-height: 30px;
     margin: 20px 0 30px;
@@ -35,6 +52,13 @@ export const Social = styled.div`
 
     strong {
       font-weight: 500;
+    }
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 1.4rem;
+      text-align: center;
+      margin: 10px 0;
+      max-width: 100%;
     }
   }
 

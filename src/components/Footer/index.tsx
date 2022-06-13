@@ -1,14 +1,18 @@
 import { Container } from '~/components/Container';
 import { Logo } from '~/components/Logo';
+import { useMediaQuery } from '~/hooks/useMediaQuery';
 import { footer } from '~/mock-components.json';
 
+import { Accordion } from './Accordion';
 import { Institutional } from './Institutional';
 import { Newsletter } from './Newsletter';
 import { SocialIcons } from './Social';
 import * as Styled from './styles';
 
 export const Footer = () => {
-  const { institutional } = footer;
+  const isMobile = useMediaQuery('(max-width: 1125px)');
+
+  const { institutionals } = footer;
 
   return (
     <Styled.Wrapper>
@@ -24,27 +28,37 @@ export const Footer = () => {
               unique features and has high security.
             </p>
 
-            <SocialIcons />
+            {!isMobile && (
+              <>
+                <SocialIcons />
 
-            <span>
-              &copy;2022Lasles<strong>VPN</strong>
-            </span>
+                <span>
+                  &copy;2022Lasles<strong>VPN</strong>
+                </span>
+              </>
+            )}
           </Styled.Social>
 
-          <Institutional
-            title={institutional.product.title}
-            links={institutional.product.links}
-          />
+          {!isMobile &&
+            institutionals.map((item) => (
+              <Institutional
+                key={item.title}
+                title={item.title}
+                links={item.links}
+              />
+            ))}
 
-          <Institutional
-            title={institutional.engage.title}
-            links={institutional.engage.links}
-          />
+          {isMobile && <Accordion items={institutionals} />}
 
-          <Institutional
-            title={institutional.earn_money.title}
-            links={institutional.earn_money.links}
-          />
+          {isMobile && (
+            <>
+              <SocialIcons />
+
+              <span>
+                &copy;2022Lasles<strong>VPN</strong>
+              </span>
+            </>
+          )}
         </Styled.Content>
       </Container>
     </Styled.Wrapper>

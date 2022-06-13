@@ -67,8 +67,8 @@
       "title": "Subscribe Now for Get Special Features!",
       "subtitle": "Let's subscribe with us and find the fun."
     },
-    "institutional": {
-      "product": {
+    "institutionals": [
+      {
         "title": "Product",
         "links": [
           {
@@ -97,7 +97,7 @@
           }
         ]
       },
-      "engage": {
+      {
         "title": "Engage",
         "links": [
           {
@@ -126,7 +126,7 @@
           }
         ]
       },
-      "earn_money": {
+      {
         "title": "Earn Money",
         "links": [
           {
@@ -139,6 +139,6 @@
           }
         ]
       }
-    }
+    ]
   }
 }

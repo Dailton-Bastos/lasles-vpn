@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   margin-bottom: 30px;
   justify-content: center;
 
+  @media only screen and (max-width: 1125px) {
+    margin: 30px 0;
+  }
+
   a {
     align-items: center;
     background-color: var(--white);
