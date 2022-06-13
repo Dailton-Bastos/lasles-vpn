@@ -9,6 +9,7 @@ export const Companies = () => {
           <Logos />
           <Logos />
           <Logos />
+          <Logos />
         </Styled.SliderWrapper>
       </Styled.SliderContainer>
     </Styled.Content>

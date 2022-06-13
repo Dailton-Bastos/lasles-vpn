@@ -115,3 +115,12 @@ export const navLinkFade = keyframes`
     transform: translateX(0);
   }
 `;
+
+export const slideCompanies = keyframes`
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(-50%,0,0);
+  }
+`;

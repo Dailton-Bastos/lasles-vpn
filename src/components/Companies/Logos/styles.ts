@@ -15,6 +15,10 @@ export const LogosContainer = styled.div`
     outline: none;
     cursor: default;
 
+    @media only screen and (max-width: 1125px) {
+      padding: 0 3rem;
+    }
+
     svg {
       opacity: 0.25;
       transition: opacity 0.2s ease;
