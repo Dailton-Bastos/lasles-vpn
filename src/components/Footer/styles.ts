@@ -6,6 +6,11 @@ export const Wrapper = styled.footer`
   padding: 180px 50px 100px;
   position: relative;
   width: 100%;
+
+  @media only screen and (max-width: 1125px) {
+    margin-top: 0;
+    padding: 30px 15px;
+  }
 `;
 
 export const Content = styled.div`

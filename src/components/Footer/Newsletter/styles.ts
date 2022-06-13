@@ -20,6 +20,15 @@ export const Content = styled.div<ViewProps>`
   width: 100%;
 
   ${({ inView }) => inView && css`animation: ${fadein} 2s;`}
+
+  @media only screen and (max-width: 1125px) {
+    flex-direction: column;
+    padding: 30px 15px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0);
+  }
 `;
 
 export const Title = styled.div`
@@ -31,10 +40,20 @@ export const Title = styled.div`
     line-height: 45px;
     max-width: 371px;
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 1125px) {
+      font-size: 3rem;
+      max-width: 100%;
+      text-align: center;
+    }
   }
 
   p {
     line-height: 30px;
+
+    @media only screen and (max-width: 1125px) {
+      text-align: center;
+    }
   }
 `;
 
@@ -53,6 +72,12 @@ export const Subscribe = styled.button`
   line-height: 25px;
   transition: background 0.3s;
   width: 250px;
+
+  @media only screen and (max-width: 1125px) {
+    height: 45px;
+    margin-top: 20px;
+    width: 100%;
+  }
 
   &:hover {
     background: #dd324d;
