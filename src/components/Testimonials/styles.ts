@@ -7,8 +7,9 @@ export const Content = styled.div<ViewProps>`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 50px 0 65px;
+  margin: 10px 0 65px;
   justify-content: center;
+  overflow: hidden;
   width: 100%;
 
   @media only screen and (max-width: 1125px) {
@@ -44,7 +45,7 @@ export const Content = styled.div<ViewProps>`
 `;
 
 export const Testimonials = styled.div`
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   max-width: 1310px;
   position: relative;
 

@@ -21,8 +21,8 @@ export const NavList = styled.ul<NavListProps>`
   justify-content: center;
 
   @media only screen and (max-width: 1125px) {
-    background: var(--white);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    background: var(--gray-50);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     flex-direction: column;
     gap: 10px;
     justify-content: flex-start;
@@ -43,7 +43,7 @@ export const NavList = styled.ul<NavListProps>`
     padding: 15px 8px;
 
     @media only screen and (max-width: 1125px) {
-      border-bottom: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-400);
       padding: 0;
       width: 100%;
     }
@@ -53,6 +53,8 @@ export const NavList = styled.ul<NavListProps>`
 
       @media only screen and (max-width: 1125px) {
         display: block;
+        color: var(--gray-900);
+        font-weight: 500;
         padding: 15px 8px;
       }
 

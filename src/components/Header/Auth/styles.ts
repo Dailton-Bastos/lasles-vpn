@@ -8,6 +8,7 @@ export const Buttons = styled.div`
 
   @media only screen and (max-width: 1125px) {
     margin-top: auto;
+    margin-bottom: 70px;
     width: 100%;
   }
 
