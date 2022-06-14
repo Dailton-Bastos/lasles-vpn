@@ -1,5 +1,6 @@
 import { Container } from '~/components/Container';
 import { Logo } from '~/components/Logo';
+import { ToTop } from '~/components/ToTop';
 import { useMediaQuery } from '~/hooks/useMediaQuery';
 import { footer } from '~/mock-components.json';
 
@@ -60,6 +61,8 @@ export const Footer = () => {
             </>
           )}
         </Styled.Content>
+
+        <ToTop />
       </Container>
     </Styled.Wrapper>
   );

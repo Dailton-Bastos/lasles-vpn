@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.footer`
   background-color: var(--gray-50);
-  margin-top: 180px;
+  margin-top: 100px;
   padding: 180px 50px 100px;
   position: relative;
   width: 100%;
